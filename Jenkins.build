@@ -1,0 +1,57 @@
+def backendImage = 'backend-nelson:1'
+def frontendImage = 'frontend-nelson:1'
+
+pipeline {
+  agent {
+    label 'jenkins-slave'
+  }
+
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git credentialsId: 'GitHubEfrei', url: 'https://github.com/efrei2023/practical-exercises.git'
+      }
+    }
+    stage('Building backend image') {
+      steps {
+        script {
+         
+        }
+      }
+    }
+    stage('Publish backend Image') {
+      steps {
+        script {
+         
+        }
+      }
+    }
+
+    stage('Building frontend image') {
+      steps {
+        script {
+        
+        }
+      }
+    }
+
+    stage('Publish frontend Image') {
+      steps {
+        script {
+          
+        }
+      }
+    }
+
+    stage('Deploy backend container') {
+      steps {
+       
+      }
+    }
+    stage('Deploy frontend container') {
+      steps {
+      
+      }
+    }
+  }
+}
